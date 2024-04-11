@@ -71,15 +71,15 @@ This app allows you to keep track of food you buy so that nothing gets wasted. A
 **Tab Navigation** (Tab to Screen)
 
 * Home Feed
-* New Food
 * Calendar
 
 **Flow Navigation** (Screen to Screen)
 
 - Stream Screen 
   - => Detail Screen when food is tapped
+  - => New Food Screen when + button tapped
 - Creation Screen 
-  - => None
+  - => Home when back/cancel button pressed
 - Detail Screen 
   - => Home when back button pressed
 - Calendar
@@ -88,8 +88,8 @@ This app allows you to keep track of food you buy so that nothing gets wasted. A
 
 ## Wireframes
 
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+
+![resized_wireframe](https://hackmd.io/_uploads/SkI3z0SeA.jpg)
 
 ### [BONUS] Digital Wireframes & Mockups
 

@@ -88,8 +88,7 @@ This app allows you to keep track of food you buy so that nothing gets wasted. A
 
 ## Wireframes
 
-
-![resized_wireframe](https://hackmd.io/_uploads/SkI3z0SeA.jpg)
+![wireframe](https://github.com/alexdivadi/wastenot/assets/26191218/93fb55a8-87cc-45c5-b4a6-cf9fa897a900)
 
 ### [BONUS] Digital Wireframes & Mockups
 

@@ -71,15 +71,15 @@ This app allows you to keep track of food you buy so that nothing gets wasted. A
 **Tab Navigation** (Tab to Screen)
 
 * Home Feed
-* New Food
 * Calendar
 
 **Flow Navigation** (Screen to Screen)
 
 - Stream Screen 
   - => Detail Screen when food is tapped
+  - => New Food Screen when + button tapped
 - Creation Screen 
-  - => None
+  - => Home when back/cancel button pressed
 - Detail Screen 
   - => Home when back button pressed
 - Calendar
@@ -88,12 +88,22 @@ This app allows you to keep track of food you buy so that nothing gets wasted. A
 
 ## Wireframes
 
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+![wireframe](https://github.com/alexdivadi/wastenot/assets/26191218/93fb55a8-87cc-45c5-b4a6-cf9fa897a900)
 
-### [BONUS] Digital Wireframes & Mockups
+### Digital Wireframes & Mockups
 
-### [BONUS] Interactive Prototype
+<img width="607" alt="figma-wireframe" src="https://github.com/alexdivadi/wastenot/assets/26191218/28310a16-cc75-4f34-9ec5-6f67ac88301d">
+
+### Interactive Prototype
+
+<div>
+    <a href="https://www.loom.com/share/e254fb689470467ab708d62b76b65df5">
+      <p>Prototype Video</p>
+    </a>
+    <a href="https://www.loom.com/share/e254fb689470467ab708d62b76b65df5">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/e254fb689470467ab708d62b76b65df5-with-play.gif">
+    </a>
+  </div>
 
 ## Schema 
 

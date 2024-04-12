@@ -94,7 +94,16 @@ This app allows you to keep track of food you buy so that nothing gets wasted. A
 
 <img width="607" alt="figma-wireframe" src="https://github.com/alexdivadi/wastenot/assets/26191218/28310a16-cc75-4f34-9ec5-6f67ac88301d">
 
-### [BONUS] Interactive Prototype
+### Interactive Prototype
+
+<div>
+    <a href="https://www.loom.com/share/e254fb689470467ab708d62b76b65df5">
+      <p>Prototype Video</p>
+    </a>
+    <a href="https://www.loom.com/share/e254fb689470467ab708d62b76b65df5">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/e254fb689470467ab708d62b76b65df5-with-play.gif">
+    </a>
+  </div>
 
 ## Schema 
 

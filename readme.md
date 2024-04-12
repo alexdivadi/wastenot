@@ -90,7 +90,9 @@ This app allows you to keep track of food you buy so that nothing gets wasted. A
 
 ![wireframe](https://github.com/alexdivadi/wastenot/assets/26191218/93fb55a8-87cc-45c5-b4a6-cf9fa897a900)
 
-### [BONUS] Digital Wireframes & Mockups
+### Digital Wireframes & Mockups
+
+<img width="607" alt="figma-wireframe" src="https://github.com/alexdivadi/wastenot/assets/26191218/28310a16-cc75-4f34-9ec5-6f67ac88301d">
 
 ### [BONUS] Interactive Prototype
 

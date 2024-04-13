@@ -1,11 +1,23 @@
 # WasteNot - Food Supply Tracker
 
+### Current State of App
+
+<div>
+    <a href="https://www.loom.com/share/6c0934c328c8487db0e09e8c3d042a63">
+      <p>View on Loom</p>
+    </a>
+    <a href="https://www.loom.com/share/6c0934c328c8487db0e09e8c3d042a63">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/6c0934c328c8487db0e09e8c3d042a63-with-play.gif">
+    </a>
+  </div>
+
 ## Table of Contents
 
 1. [Overview](#Overview)
 2. [Product Spec](#Product-Spec)
 3. [Wireframes](#Wireframes)
 4. [Schema](#Schema)
+5. [Sprints](#Sprints)
 
 ## Overview
 
@@ -108,6 +120,13 @@ This app allows you to keep track of food you buy so that nothing gets wasted. A
 ## Schema 
 
 [This section will be completed in Unit 9]
+
+### Sprints
+
+1. Brainstorm ideas, set up project with empty screens and research food expiration
+   - Completed creating a tableview and some initial empty screens. Also found data source for food expiration. Challenges faced included learning how to create navigation and tab controllers again from scratch. 
+2. Scrape food expiration data from web and implement Food models
+3. Update table views and implement User Defaults for local storage
 
 ### Models
 

@@ -13,11 +13,21 @@
 
 ## Table of Contents
 
-1. [Overview](#Overview)
-2. [Product Spec](#Product-Spec)
-3. [Wireframes](#Wireframes)
-4. [Schema](#Schema)
-5. [Sprints](#Sprints)
+1. [Sprints](#Sprints)
+2. [Overview](#Overview)
+3. [Product Spec](#Product-Spec)
+4. [Wireframes](#Wireframes)
+5. [Schema](#Schema)
+
+## Sprints
+
+1. Brainstorm ideas, set up project with empty screens and research food expiration
+   - [x] Created initial empty screens + viewcontrollers
+   - [x] Created tableview
+   - [x] Found data source for food expiration calculation
+   - Challenges faced: Implementing navigation and tab controllers, then trying to rename view controller
+2. Scrape food expiration data from web and implement Food models
+3. Update table views and implement User Defaults for local storage
 
 ## Overview
 
@@ -121,12 +131,6 @@ This app allows you to keep track of food you buy so that nothing gets wasted. A
 
 [This section will be completed in Unit 9]
 
-### Sprints
-
-1. Brainstorm ideas, set up project with empty screens and research food expiration
-   - Completed creating a tableview and some initial empty screens. Also found data source for food expiration. Challenges faced included learning how to create navigation and tab controllers again from scratch. 
-2. Scrape food expiration data from web and implement Food models
-3. Update table views and implement User Defaults for local storage
 
 ### Models
 

@@ -3,11 +3,11 @@
 ### Current State of App
 
 <div>
-    <a href="https://www.loom.com/share/6c0934c328c8487db0e09e8c3d042a63">
+    <a href="https://www.loom.com/share/786370fcb0ec4d8187042de906953ec2">
       <p>View on Loom</p>
     </a>
-    <a href="https://www.loom.com/share/6c0934c328c8487db0e09e8c3d042a63">
-      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/6c0934c328c8487db0e09e8c3d042a63-with-play.gif">
+    <a href="https://www.loom.com/share/786370fcb0ec4d8187042de906953ec2">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/786370fcb0ec4d8187042de906953ec2-with-play.gif">
     </a>
   </div>
 
@@ -27,7 +27,15 @@
    - [x] Found data source for food expiration calculation
    - Challenges faced: Implementing navigation and tab controllers, then trying to rename view controller
 2. Scrape food expiration data from web and implement Food models
-3. Update table views and implement User Defaults for local storage
+   - [x] Created form to compose new food
+   - [x] Added tableview logic
+   - [x] Scraped expiration data from web
+   - [x] Implemented Food and Food Type models
+   - [x] Implemented search bar in food type selection screen
+   - [x] Implemented expired status feature and dynamic section headers
+   - [x] Implemented deleting items
+   - Challenges faced: Passing data between view controllers using delegates was new and I didn't understand it at first. I also had to change up the models a couple times to get what I wanted. The logic was quite confusing.
+3. Add filtering by storage and calendar view
 
 ## Overview
 
@@ -129,15 +137,7 @@ This app allows you to keep track of food you buy so that nothing gets wasted. A
 
 ## Schema 
 
-[This section will be completed in Unit 9]
-
 
 ### Models
 
 [Add table of models]
-
-### Networking
-
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]

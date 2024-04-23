@@ -7,23 +7,39 @@
 
 import UIKit
 
+protocol getFoodDelegateProtocol{
+    func getFood(food: Food)
+    func getFoodCompose() -> Food?
+}
 class FoodComposeViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    @IBAction func didTapCancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
+    }
+    @IBAction func didTapDone(_ sender: UIBarButtonItem) {
+        print("Pressed done")
+        
+        guard let food = FoodComposeViewController.delegate?.getFoodCompose()
+        else {
+            return
+        }
+        
+        
+        onComposeFood?(food)
+        dismiss(animated: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    var foodToEdit: Food?
+    var onComposeFood: ((Food) -> Void)? = nil
+    static var delegate: getFoodDelegateProtocol?
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if let food = foodToEdit {
+            FoodComposeViewController.delegate?.getFood(food: food)
+        }
     }
-    */
 
 }

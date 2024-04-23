@@ -11,6 +11,12 @@
 		5C0999022BCB221F00CE5D15 /* FoodComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0999012BCB221F00CE5D15 /* FoodComposeViewController.swift */; };
 		5C0999042BCB223900CE5D15 /* FoodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0999032BCB223900CE5D15 /* FoodListViewController.swift */; };
 		5C0999062BCB22B900CE5D15 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0999052BCB22B900CE5D15 /* FoodCell.swift */; };
+		5C09990A2BD4415700CE5D15 /* FoodSelectTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0999092BD4415700CE5D15 /* FoodSelectTypeViewController.swift */; };
+		5C09990C2BD4597400CE5D15 /* FoodTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C09990B2BD4597400CE5D15 /* FoodTypeCell.swift */; };
+		5C09990E2BD462A700CE5D15 /* FoodComposeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C09990D2BD462A700CE5D15 /* FoodComposeTableViewController.swift */; };
+		5C0999102BD46A6600CE5D15 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C09990F2BD46A6600CE5D15 /* Food.swift */; };
+		5C0999122BD47BED00CE5D15 /* FoodTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0999112BD47BED00CE5D15 /* FoodTypes.swift */; };
+		5C0999142BD47EF000CE5D15 /* expiration_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C0999132BD47EF000CE5D15 /* expiration_data.json */; };
 		5C5656892BC9A254004199AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5656882BC9A254004199AB /* AppDelegate.swift */; };
 		5C56568B2BC9A254004199AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C56568A2BC9A254004199AB /* SceneDelegate.swift */; };
 		5C5656902BC9A254004199AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C56568E2BC9A254004199AB /* Main.storyboard */; };
@@ -19,6 +25,7 @@
 		5C5656A02BC9A257004199AB /* WasteNotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C56569F2BC9A257004199AB /* WasteNotTests.swift */; };
 		5C5656AA2BC9A257004199AB /* WasteNotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5656A92BC9A257004199AB /* WasteNotUITests.swift */; };
 		5C5656AC2BC9A257004199AB /* WasteNotUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5656AB2BC9A257004199AB /* WasteNotUITestsLaunchTests.swift */; };
+		5CA19BD72BD7091500975C01 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA19BD62BD7091500975C01 /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +50,12 @@
 		5C0999012BCB221F00CE5D15 /* FoodComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodComposeViewController.swift; sourceTree = "<group>"; };
 		5C0999032BCB223900CE5D15 /* FoodListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewController.swift; sourceTree = "<group>"; };
 		5C0999052BCB22B900CE5D15 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
+		5C0999092BD4415700CE5D15 /* FoodSelectTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSelectTypeViewController.swift; sourceTree = "<group>"; };
+		5C09990B2BD4597400CE5D15 /* FoodTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTypeCell.swift; sourceTree = "<group>"; };
+		5C09990D2BD462A700CE5D15 /* FoodComposeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodComposeTableViewController.swift; sourceTree = "<group>"; };
+		5C09990F2BD46A6600CE5D15 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		5C0999112BD47BED00CE5D15 /* FoodTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTypes.swift; sourceTree = "<group>"; };
+		5C0999132BD47EF000CE5D15 /* expiration_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = expiration_data.json; sourceTree = "<group>"; };
 		5C5656852BC9A254004199AB /* WasteNot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WasteNot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C5656882BC9A254004199AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C56568A2BC9A254004199AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +68,7 @@
 		5C5656A52BC9A257004199AB /* WasteNotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WasteNotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C5656A92BC9A257004199AB /* WasteNotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteNotUITests.swift; sourceTree = "<group>"; };
 		5C5656AB2BC9A257004199AB /* WasteNotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteNotUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5CA19BD62BD7091500975C01 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +119,7 @@
 		5C5656872BC9A254004199AB /* WasteNot */ = {
 			isa = PBXGroup;
 			children = (
+				5C0999132BD47EF000CE5D15 /* expiration_data.json */,
 				5C5656882BC9A254004199AB /* AppDelegate.swift */,
 				5C56568A2BC9A254004199AB /* SceneDelegate.swift */,
 				5C0999032BCB223900CE5D15 /* FoodListViewController.swift */,
@@ -115,6 +130,12 @@
 				5C5656912BC9A256004199AB /* Assets.xcassets */,
 				5C5656932BC9A256004199AB /* LaunchScreen.storyboard */,
 				5C5656962BC9A256004199AB /* Info.plist */,
+				5C0999092BD4415700CE5D15 /* FoodSelectTypeViewController.swift */,
+				5C09990B2BD4597400CE5D15 /* FoodTypeCell.swift */,
+				5C09990D2BD462A700CE5D15 /* FoodComposeTableViewController.swift */,
+				5C09990F2BD46A6600CE5D15 /* Food.swift */,
+				5C0999112BD47BED00CE5D15 /* FoodTypes.swift */,
+				5CA19BD62BD7091500975C01 /* DateExtension.swift */,
 			);
 			path = WasteNot;
 			sourceTree = "<group>";
@@ -240,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C0999142BD47EF000CE5D15 /* expiration_data.json in Resources */,
 				5C5656952BC9A256004199AB /* LaunchScreen.storyboard in Resources */,
 				5C5656922BC9A256004199AB /* Assets.xcassets in Resources */,
 				5C5656902BC9A254004199AB /* Main.storyboard in Resources */,
@@ -267,12 +289,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C09990E2BD462A700CE5D15 /* FoodComposeTableViewController.swift in Sources */,
+				5CA19BD72BD7091500975C01 /* DateExtension.swift in Sources */,
 				5C0999042BCB223900CE5D15 /* FoodListViewController.swift in Sources */,
 				5C0999062BCB22B900CE5D15 /* FoodCell.swift in Sources */,
+				5C09990A2BD4415700CE5D15 /* FoodSelectTypeViewController.swift in Sources */,
 				5C0999002BCB21F500CE5D15 /* CalendarViewController.swift in Sources */,
 				5C0999022BCB221F00CE5D15 /* FoodComposeViewController.swift in Sources */,
 				5C5656892BC9A254004199AB /* AppDelegate.swift in Sources */,
+				5C0999102BD46A6600CE5D15 /* Food.swift in Sources */,
 				5C56568B2BC9A254004199AB /* SceneDelegate.swift in Sources */,
+				5C09990C2BD4597400CE5D15 /* FoodTypeCell.swift in Sources */,
+				5C0999122BD47BED00CE5D15 /* FoodTypes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

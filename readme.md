@@ -11,6 +11,16 @@
     </a>
   </div>
 
+### Sprint 1 Version
+<div>
+    <a href="https://www.loom.com/share/6c0934c328c8487db0e09e8c3d042a63">
+      <p>View on Loom</p>
+    </a>
+    <a href="https://www.loom.com/share/6c0934c328c8487db0e09e8c3d042a63">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/6c0934c328c8487db0e09e8c3d042a63-with-play.gif">
+    </a>
+  </div>
+
 ## Table of Contents
 
 1. [Sprints](#Sprints)

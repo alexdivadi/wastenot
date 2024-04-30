@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FoodListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class FoodListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     @IBOutlet weak var tableHeader: UIView!
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -41,11 +41,49 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
         performSegue(withIdentifier: "ComposeSegue", sender: nil)
     }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+            searchFilter = searchText
+            refreshFoods()
+        }
+    
+    @IBAction func didTapStorage(_ sender: UIButton) {
+        let index = storageButtons.firstIndex(of: sender)!
+        
+        activeStorageTypes[index] = sender.isSelected
+        
+        sender.layer.backgroundColor = sender.isSelected
+        ? UIColor.greenButtonColor.cgColor
+        : UIColor.systemGray6.cgColor
+        
+        sender.configuration?.baseForegroundColor = sender.isSelected ? .white : .label
+        
+        refreshFoods()
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+       if #available(iOS 13.0, *) {
+           if (traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection)) {
+               for button in storageButtons {
+                   button.layer.backgroundColor = button.isSelected
+                   ? UIColor.greenButtonColor.cgColor
+                   : UIColor.systemGray6.cgColor
+               }
+           }
+       }
+    }
+    
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    @IBOutlet var storageButtons: [UIButton]!
+    
     var mappedFoods = [String: [Food]]()
     var sectionHeaders = [String]()
+    var searchFilter = String()
+    var storageTypes: [String] = ["pantry", "fridge", "freezer"]
+    var activeStorageTypes: [Bool] = [false, false, false]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +91,14 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.tableHeaderView = tableHeader
         tableView.dataSource = self
         tableView.delegate = self
+        searchBar.delegate = self
+        
+        for button in storageButtons {
+            button.layer.cornerRadius = 12
+            button.layer.backgroundColor = UIColor.systemGray6.cgColor
+            button.configuration?.baseForegroundColor = .label
+            button.isSelected = false
+        }
         
         navigationController?.navigationBar.prefersLargeTitles = true
     }
@@ -73,7 +119,27 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
 
     private func refreshFoods() {
         var foods = Food.getFoods()
+        
+        var storages: [String] = [String]()
+        for (index, active) in activeStorageTypes.enumerated() {
+            if active { storages.append(storageTypes[index]) }
+        }
+        
+        foods = storages.isEmpty ? foods : foods.filter { (food: Food) -> Bool in
+            return storages.contains(food.expirationData!.storage)
+        }
+        
+        foods = searchFilter.isEmpty ? foods : foods.filter { (food: Food) -> Bool in
+            return (food.foodType.name.range(of: searchFilter, options: .caseInsensitive, range: nil, locale: nil) != nil || food.foodType.category.range(of: searchFilter, options: .caseInsensitive, range: nil, locale: nil) != nil)
+        }
+        
         foods.sort { lhs, rhs in
+            if lhs.expirationDate == nil {
+                return false
+            }
+            if rhs.expirationDate == nil {
+                return true
+            }
             return lhs.expirationDate! < rhs.expirationDate!
         }
         
@@ -108,9 +174,8 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
                 }
             }
         }
-        print(foods.count)
-        print(mappedFoods.count)
-        print(sectionHeaders.count)
+        
+        self.sectionHeaders.move("Expiring Soon", to: 0)
         
         self.mappedFoods = mappedFoods
         

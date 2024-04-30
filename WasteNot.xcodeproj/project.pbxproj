@@ -25,7 +25,7 @@
 		5C5656A02BC9A257004199AB /* WasteNotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C56569F2BC9A257004199AB /* WasteNotTests.swift */; };
 		5C5656AA2BC9A257004199AB /* WasteNotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5656A92BC9A257004199AB /* WasteNotUITests.swift */; };
 		5C5656AC2BC9A257004199AB /* WasteNotUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5656AB2BC9A257004199AB /* WasteNotUITestsLaunchTests.swift */; };
-		5CA19BD72BD7091500975C01 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA19BD62BD7091500975C01 /* DateExtension.swift */; };
+		5CA19BD72BD7091500975C01 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA19BD62BD7091500975C01 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +68,7 @@
 		5C5656A52BC9A257004199AB /* WasteNotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WasteNotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C5656A92BC9A257004199AB /* WasteNotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteNotUITests.swift; sourceTree = "<group>"; };
 		5C5656AB2BC9A257004199AB /* WasteNotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteNotUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		5CA19BD62BD7091500975C01 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		5CA19BD62BD7091500975C01 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,18 +124,18 @@
 				5C56568A2BC9A254004199AB /* SceneDelegate.swift */,
 				5C0999032BCB223900CE5D15 /* FoodListViewController.swift */,
 				5C0999012BCB221F00CE5D15 /* FoodComposeViewController.swift */,
-				5C0998FF2BCB21F500CE5D15 /* CalendarViewController.swift */,
-				5C56568E2BC9A254004199AB /* Main.storyboard */,
-				5C0999052BCB22B900CE5D15 /* FoodCell.swift */,
-				5C5656912BC9A256004199AB /* Assets.xcassets */,
-				5C5656932BC9A256004199AB /* LaunchScreen.storyboard */,
-				5C5656962BC9A256004199AB /* Info.plist */,
-				5C0999092BD4415700CE5D15 /* FoodSelectTypeViewController.swift */,
-				5C09990B2BD4597400CE5D15 /* FoodTypeCell.swift */,
 				5C09990D2BD462A700CE5D15 /* FoodComposeTableViewController.swift */,
+				5C0999092BD4415700CE5D15 /* FoodSelectTypeViewController.swift */,
+				5C0998FF2BCB21F500CE5D15 /* CalendarViewController.swift */,
+				5C0999052BCB22B900CE5D15 /* FoodCell.swift */,
+				5C09990B2BD4597400CE5D15 /* FoodTypeCell.swift */,
 				5C09990F2BD46A6600CE5D15 /* Food.swift */,
 				5C0999112BD47BED00CE5D15 /* FoodTypes.swift */,
-				5CA19BD62BD7091500975C01 /* DateExtension.swift */,
+				5CA19BD62BD7091500975C01 /* Extensions.swift */,
+				5C56568E2BC9A254004199AB /* Main.storyboard */,
+				5C5656932BC9A256004199AB /* LaunchScreen.storyboard */,
+				5C5656912BC9A256004199AB /* Assets.xcassets */,
+				5C5656962BC9A256004199AB /* Info.plist */,
 			);
 			path = WasteNot;
 			sourceTree = "<group>";
@@ -290,7 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C09990E2BD462A700CE5D15 /* FoodComposeTableViewController.swift in Sources */,
-				5CA19BD72BD7091500975C01 /* DateExtension.swift in Sources */,
+				5CA19BD72BD7091500975C01 /* Extensions.swift in Sources */,
 				5C0999042BCB223900CE5D15 /* FoodListViewController.swift in Sources */,
 				5C0999062BCB22B900CE5D15 /* FoodCell.swift in Sources */,
 				5C09990A2BD4415700CE5D15 /* FoodSelectTypeViewController.swift in Sources */,

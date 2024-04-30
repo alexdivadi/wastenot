@@ -17,8 +17,6 @@ class FoodComposeViewController: UIViewController {
         dismiss(animated: true)
     }
     @IBAction func didTapDone(_ sender: UIBarButtonItem) {
-        print("Pressed done")
-        
         guard let food = FoodComposeViewController.delegate?.getFoodCompose()
         else {
             return

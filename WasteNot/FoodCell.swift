@@ -40,8 +40,12 @@ class FoodCell: UITableViewCell {
         let now: Date = Date.now
         
         if let expirationDate = food.expirationDate {
-            if expirationDate < now {
-                expirationLabel.text = "Expired"
+            if food.expirationData != nil && !food.expirationData!.recommended {
+                expirationLabel.text = "Selected storage not advised - Expected expiration:  \(expirationDate.formatted(date: .numeric, time: .omitted))"
+                expirationStatusView.tintColor = UIColor.systemGray
+            }
+            else if expirationDate < now {
+                expirationLabel.text = "Expired on \(expirationDate.formatted(date: .numeric, time: .omitted))"
                 expirationStatusView.tintColor = UIColor.systemRed
             }
             else if expirationDate - now < 60*60*24 {
@@ -53,11 +57,11 @@ class FoodCell: UITableViewCell {
                 expirationStatusView.tintColor = UIColor.systemYellow
             }
             else if food.checkDate != nil && food.checkDate! < now {
-                expirationLabel.text = "Expires on \(expirationDate.formatted())"
+                expirationLabel.text = "Expires on \(expirationDate.formatted(date: .numeric, time: .omitted))"
                 expirationStatusView.tintColor = UIColor.systemYellow
             }
             else {
-                expirationLabel.text = "Expires on \(expirationDate.formatted())"
+                expirationLabel.text = "Expires on \(expirationDate.formatted(date: .numeric, time: .omitted))"
                 expirationStatusView.tintColor = UIColor.systemGreen
             }
         }

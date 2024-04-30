@@ -210,7 +210,7 @@ extension Food {
         guard let expirationDate = self.expirationDate else { return }
         guard expirationDate > Date() else { return }
         
-        let identifier = "\(self.foodType.name)-expiration-notification"
+        let identifier = "\(self.id)-expiration-notification"
         let title = "Your food is about to expire!"
         let body = "Check to see which food has reached its expiration date."
         

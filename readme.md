@@ -3,6 +3,18 @@
 ### Current State of App
 
 <div>
+    <a href="https://www.loom.com/share/e44eeb53797e463586f509f27db259bc">
+      <p>View on Loom</p>
+    </a>
+    <a href="https://www.loom.com/share/e44eeb53797e463586f509f27db259bc">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/e44eeb53797e463586f509f27db259bc-with-play.gif">
+    </a>
+  </div>
+
+
+### Sprint 2 Version
+
+<div>
     <a href="https://www.loom.com/share/786370fcb0ec4d8187042de906953ec2">
       <p>View on Loom</p>
     </a>
@@ -46,6 +58,14 @@
    - [x] Implemented deleting items
    - Challenges faced: Passing data between view controllers using delegates was new and I didn't understand it at first. I also had to change up the models a couple times to get what I wanted. The logic was quite confusing.
 3. Add filtering by storage and calendar view
+   - [x] Added calendar view which updates decorations based on expiration
+   - [x] Added local push notifications (no dev signing capabilities yet though)
+   - [x] Added about page
+   - [x] Added app icon and launch screen
+   - [x] Implemented filtering by storage and search bar
+   - [x] Bugfixes and clean up UI
+   - [x] Added support for dark mode
+   - Challenges faced: UICalendarView crashes whenever the dates needed to update are outside the year visible, however this was not in the documentation. It was very finnicky to figure out and I spent a lot of time debugging. I also had trouble getting the color of the buttons the way I wanted them to be.
 
 ## Overview
 
@@ -144,10 +164,3 @@ This app allows you to keep track of food you buy so that nothing gets wasted. A
       <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/e254fb689470467ab708d62b76b65df5-with-play.gif">
     </a>
   </div>
-
-## Schema 
-
-
-### Models
-
-[Add table of models]

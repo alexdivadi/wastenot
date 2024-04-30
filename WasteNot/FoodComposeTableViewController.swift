@@ -21,12 +21,14 @@ class FoodComposeTableViewController: UITableViewController, getFoodTypeDelegate
     @IBOutlet weak var openedSwitch: UISwitch!
     @IBOutlet weak var storageButton: UIButton!
     
+    @IBOutlet weak var openSwitchTableCell: UITableViewCell!
     @IBOutlet weak var tipsView: UITextView!
     
     @IBAction func didTapOpened(_ sender: UISwitch) {
         self.fromDateType = openedSwitch.isOn ? "opening" : "purchase"
         self.dateLabel.text = openedSwitch.isOn ? "Date Opened" : "Date Bought"
         self.togglePackageDateOptional()
+        self.updateStorage(storage: self.storage)
     }
     
     @IBAction func didTapDatePicker(_ sender: UIDatePicker) {
@@ -56,8 +58,7 @@ class FoodComposeTableViewController: UITableViewController, getFoodTypeDelegate
         self.foodLabel.text = foodType?.name ?? "Select a food"
         self.foodEmojiLabel.text =  foodType?.emoji ?? "⚪️"
         self.storageButton.setTitle(self.storage, for: .normal)
-        self.dateLabel.text = openedSwitch.isOn ? "Date Opened" : "Date Bought"
-        self.openedSwitch.setOn(self.fromDateType == "opening", animated: true)
+        self.toggleOpenedSwitchVisible()
         self.togglePackageDateOptional()
         
     }
@@ -66,10 +67,10 @@ class FoodComposeTableViewController: UITableViewController, getFoodTypeDelegate
         self.id = food.id
         self.updateFood(foodType: food.foodType)
         self.fromDateType = food.expirationData?.fromDate ?? "purchase"
-        self.dateLabel.text = openedSwitch.isOn ? "Date Opened" : "Date Bought"
+        
         self.datePicker.setDate(food.startDate ?? Date(), animated: true)
         self.datePickerPackage.setDate(food.packageDate ?? Date(), animated: true)
-        self.openedSwitch.setOn(self.fromDateType == "opening", animated: true)
+        self.toggleOpenedSwitchVisible()
         self.updateStorage(storage: food.expirationData?.storage ?? "Select")
         self.storageButton.menu = storageButtonMenu()
         self.togglePackageDateOptional()
@@ -79,6 +80,7 @@ class FoodComposeTableViewController: UITableViewController, getFoodTypeDelegate
         self.updateFood(foodType: foodType)
         self.updateStorage(storage: self.storage)
         self.storageButton.menu = storageButtonMenu()
+        self.toggleOpenedSwitchVisible()
         self.togglePackageDateOptional()
     }
     
@@ -120,6 +122,23 @@ class FoodComposeTableViewController: UITableViewController, getFoodTypeDelegate
         }
     }
     
+    func toggleOpenedSwitchVisible() {
+        guard let expiration = foodType?.expiration else { return }
+        
+        if expiration.contains(where: { exp in
+            exp.fromDate == "opening"
+         }) {
+            openSwitchTableCell.isHidden = false
+            self.openedSwitch.setOn(self.fromDateType == "opening", animated: true)
+            self.dateLabel.text = openedSwitch.isOn ? "Date Opened" : "Date Bought"
+        }
+        else {
+            openSwitchTableCell.isHidden = true
+            self.fromDateType = "purchase"
+            self.dateLabel.text = "Date Bought"
+        }
+    }
+    
     func getFoodCompose() -> Food? {
         guard let foodType = self.foodType else { return nil }
         guard storage != "Select" else { return nil }
@@ -151,13 +170,34 @@ class FoodComposeTableViewController: UITableViewController, getFoodTypeDelegate
             )
         }
         else {
-            composedFood.expirationData = Expiration(
-                storage: self.storage,
-                recommended: false,
-                unit: "day",
-                duration: [Duration(length: 1)],
-                fromDate: self.fromDateType
-            )
+            switch storage {
+                case "pantry":
+                composedFood.expirationData = Expiration(
+                    storage: self.storage,
+                    recommended: false,
+                    unit: "day",
+                    duration: [Duration(length: 1)],
+                    fromDate: self.fromDateType
+                )
+            case "fridge":
+                composedFood.expirationData = Expiration(
+                    storage: self.storage,
+                    recommended: false,
+                    unit: "day",
+                    duration: [Duration(length: 3)],
+                    fromDate: self.fromDateType
+                )
+            case "freezer":
+                composedFood.expirationData = Expiration(
+                    storage: self.storage,
+                    recommended: false,
+                    unit: "month",
+                    duration: [Duration(length: 2)],
+                    fromDate: self.fromDateType
+                )
+            default:
+                    return nil
+            }
         }
         
         return composedFood
@@ -174,13 +214,16 @@ class FoodComposeTableViewController: UITableViewController, getFoodTypeDelegate
                 if !expiration.contains(where: { exp in
                     exp.storage == storageType && exp.recommended
                 }) {
+                    let recommended = !expiration.contains(where: { exp in
+                        exp.storage == storageType && exp.fromDate == fromDateType
+                    })
                     switch storageType {
                     case "pantry":
-                        pantryActionTitle = "Pantry - Not Advised"
+                        pantryActionTitle = recommended ? "Pantry - No info" : "Pantry - Not Advised"
                     case "fridge":
-                        fridgeActionTitle = "Fridge - Not Advised"
+                        fridgeActionTitle = recommended ? "Fridge - No info" : "Fridge - Not Advised"
                     case "freezer":
-                        freezerActionTitle = "Freezer - Not Advised"
+                        freezerActionTitle = recommended ? "Freezer - No info" : "Freezer - Not Advised"
                     default:
                         continue
                     }

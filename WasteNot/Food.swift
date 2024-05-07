@@ -222,7 +222,7 @@ extension Food {
         
         let calendar = Calendar.current
         var components = calendar.dateComponents([.year, .month, .day], from: expirationDate)
-        components.hour = 12
+        components.hour = 9
         components.minute = 0
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)

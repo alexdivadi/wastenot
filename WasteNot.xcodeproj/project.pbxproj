@@ -69,6 +69,7 @@
 		5C5656A92BC9A257004199AB /* WasteNotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteNotUITests.swift; sourceTree = "<group>"; };
 		5C5656AB2BC9A257004199AB /* WasteNotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteNotUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5CA19BD62BD7091500975C01 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5CF8DE482BEAAB45009924A3 /* WasteNot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WasteNot.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +120,7 @@
 		5C5656872BC9A254004199AB /* WasteNot */ = {
 			isa = PBXGroup;
 			children = (
+				5CF8DE482BEAAB45009924A3 /* WasteNot.entitlements */,
 				5C0999132BD47EF000CE5D15 /* expiration_data.json */,
 				5C5656882BC9A254004199AB /* AppDelegate.swift */,
 				5C56568A2BC9A254004199AB /* SceneDelegate.swift */,
@@ -480,6 +482,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WasteNot/WasteNot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XKL79HG97M;
@@ -508,6 +511,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WasteNot/WasteNot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XKL79HG97M;

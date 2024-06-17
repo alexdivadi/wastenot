@@ -85,6 +85,10 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
     var storageTypes: [String] = ["pantry", "fridge", "freezer"]
     var activeStorageTypes: [Bool] = [false, false, false]
     
+    let _safeKey = "Safe"
+    let _checkKey = "Check"
+    let _expiredKey = "Expired"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -150,32 +154,32 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
             let now = Date.now
         
             if food.expirationDate != nil && food.expirationDate! < now {
-                if mappedFoods["Expired"] == nil {
-                    mappedFoods["Expired"] = [food]
-                    self.sectionHeaders += ["Expired"]
+                if mappedFoods[_expiredKey] == nil {
+                    mappedFoods[_expiredKey] = [food]
+                    self.sectionHeaders += [_expiredKey]
                 } else {
-                    mappedFoods["Expired"]! += [food]
+                    mappedFoods[_expiredKey]! += [food]
                 }
             }
             else if food.checkDate != nil && food.checkDate! < now {
-                if mappedFoods["Expiring Soon"] == nil {
-                    mappedFoods["Expiring Soon"] = [food]
-                    self.sectionHeaders += ["Expiring Soon"]
+                if mappedFoods[_checkKey] == nil {
+                    mappedFoods[_checkKey] = [food]
+                    self.sectionHeaders += [_checkKey]
                 } else {
-                    mappedFoods["Expiring Soon"]! += [food]
+                    mappedFoods[_checkKey]! += [food]
                 }
             }
             else {
-                if mappedFoods["Safe"] == nil {
-                    mappedFoods["Safe"] = [food]
-                    self.sectionHeaders += ["Safe"]
+                if mappedFoods[_safeKey] == nil {
+                    mappedFoods[_safeKey] = [food]
+                    self.sectionHeaders += [_safeKey]
                 } else {
-                    mappedFoods["Safe"]! += [food]
+                    mappedFoods[_safeKey]! += [food]
                 }
             }
         }
         
-        self.sectionHeaders.move("Expiring Soon", to: 0)
+        self.sectionHeaders.move(_checkKey, to: 0)
         
         self.mappedFoods = mappedFoods
         

@@ -488,6 +488,7 @@
 				DEVELOPMENT_TEAM = XKL79HG97M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WasteNot/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Food Supply Tracker";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -517,6 +518,7 @@
 				DEVELOPMENT_TEAM = XKL79HG97M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WasteNot/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Food Supply Tracker";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

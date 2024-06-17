@@ -36,7 +36,10 @@ class FoodComposeViewController: UIViewController {
         super.viewDidLoad()
         
         if let food = foodToEdit {
+            self.title = "Edit Food"
             FoodComposeViewController.delegate?.getFood(food: food)
+        } else {
+            self.title = "New Food"
         }
     }
 

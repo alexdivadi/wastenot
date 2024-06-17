@@ -15,6 +15,7 @@ class Food: Codable, Equatable {
     
     let id: String
     var foodType: FoodType
+    var name: String
     var startDate: Date?
     var packageDate: Date?
     
@@ -22,6 +23,7 @@ class Food: Codable, Equatable {
     private(set) var expirationDate: Date?
 
     init(foodType: FoodType,
+         name: String,
          checkDate: Date? = nil,
          expirationDate: Date? = nil,
          startDate: Date? = nil,
@@ -30,6 +32,7 @@ class Food: Codable, Equatable {
          emoji: String? = nil,
          id: String) {
         self.foodType = foodType
+        self.name = name
         self.checkDate = checkDate
         self.expirationDate = expirationDate
         self.startDate = startDate
@@ -42,6 +45,7 @@ class Food: Codable, Equatable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decode(String.self, forKey: .id)
         self.foodType = try container.decode(FoodType.self, forKey: .foodType)
+        self.name = try container.decode(String.self, forKey: .name)
         self.expirationData = try container.decodeIfPresent(Expiration.self, forKey: .expirationData)
         self.startDate = try container.decodeIfPresent(Date.self, forKey: .startDate)
         self.packageDate = try container.decodeIfPresent(Date.self, forKey: .packageDate)
@@ -222,7 +226,7 @@ extension Food {
         
         let calendar = Calendar.current
         var components = calendar.dateComponents([.year, .month, .day], from: expirationDate)
-        components.hour = 9
+        components.hour = 8
         components.minute = 0
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)

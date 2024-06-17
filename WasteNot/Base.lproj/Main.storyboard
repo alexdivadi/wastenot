@@ -419,7 +419,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="separatorColor" systemColor="secondarySystemBackgroundColor"/>
                         <textView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" textAlignment="center" id="QCO-Ax-cBL">
-                            <rect key="frame" x="0.0" y="388.33333396911621" width="393" height="210"/>
+                            <rect key="frame" x="0.0" y="432.00000190734863" width="393" height="210"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -464,8 +464,31 @@
                                             <segue destination="Ned-sH-vTc" kind="show" id="b1a-TH-DL3"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="hzL-md-ceU">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="r77-fc-i49">
                                         <rect key="frame" x="20" y="99" width="353" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r77-fc-i49" id="hyD-hc-jlg">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your food name here" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vJb-lU-C5P">
+                                                    <rect key="frame" x="146" y="4" width="187" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Food Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDi-fj-qyf">
+                                                    <rect key="frame" x="20" y="11" width="106" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="hzL-md-ceU">
+                                        <rect key="frame" x="20" y="142.66666793823242" width="353" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hzL-md-ceU" id="c3K-mh-gbL">
                                             <rect key="frame" x="0.0" y="0.0" width="353" height="43.666667938232422"/>
@@ -494,7 +517,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="gQs-80-aKN">
-                                        <rect key="frame" x="20" y="142.66666793823242" width="353" height="43.666667938232422"/>
+                                        <rect key="frame" x="20" y="186.33333587646484" width="353" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gQs-80-aKN" id="XHm-rt-U0j">
                                             <rect key="frame" x="0.0" y="0.0" width="353" height="43.666667938232422"/>
@@ -522,7 +545,7 @@
                             <tableViewSection headerTitle="Date" id="bWi-Ye-Xi7">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="64" id="DlZ-J5-46c">
-                                        <rect key="frame" x="20" y="242.33333396911621" width="353" height="64"/>
+                                        <rect key="frame" x="20" y="286.00000190734863" width="353" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DlZ-J5-46c" id="KHE-yk-qmc">
                                             <rect key="frame" x="0.0" y="0.0" width="353" height="64"/>
@@ -546,7 +569,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="64" id="8lX-Oq-DAb">
-                                        <rect key="frame" x="20" y="306.33333396911621" width="353" height="64"/>
+                                        <rect key="frame" x="20" y="350.00000190734863" width="353" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8lX-Oq-DAb" id="1p5-dn-V6k">
                                             <rect key="frame" x="0.0" y="0.0" width="353" height="64"/>
@@ -590,6 +613,7 @@
                         <outlet property="datePickerPackage" destination="2dY-UX-RZ8" id="49Z-bG-k5F"/>
                         <outlet property="foodEmojiLabel" destination="PZR-iC-MlH" id="BDe-Oq-bI4"/>
                         <outlet property="foodLabel" destination="sdx-He-ofL" id="iC6-3b-Ebw"/>
+                        <outlet property="foodNameTextField" destination="vJb-lU-C5P" id="xjj-Lu-Mat"/>
                         <outlet property="openSwitchTableCell" destination="gQs-80-aKN" id="E38-Wv-c9I"/>
                         <outlet property="openedSwitch" destination="cKJ-Z1-u8b" id="I5Y-yp-Tj6"/>
                         <outlet property="packageDateOptionalLabel" destination="dSH-Op-1rD" id="T49-XE-Zwt"/>
@@ -719,7 +743,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7JV-UF-q1b">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7JV-UF-q1b">
                                 <rect key="frame" x="16" y="189" width="361" height="299"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">WasteNot is an app to help you inventory your food with the hope that nothing will go to waste. The suggested expiration dates represent an estimate of the time frame for when a food has the best freshness and quality. Food that has "expired" may still be safe to eat. The information used to calculate expiration dates, as well as general tips for food storage, all come from information publicly available from the USDA's FoodKeeper app. You can find this information and more at https://www.foodsafety.gov/keep-food-safe/foodkeeper-app.</string>
@@ -737,33 +761,33 @@
                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WasteNot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKg-qG-pTO">
-                                <rect key="frame" x="124" y="146" width="145" height="35.666666666666657"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="takeoutbag.and.cup.and.straw.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OYu-Yy-3Av">
                                 <rect key="frame" x="135" y="552.33333333333348" width="122" height="90"/>
                                 <color key="tintColor" red="0.20784313725490194" green="0.36862745098039218" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Supply Tracker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKg-qG-pTO">
+                                <rect key="frame" x="48" y="140" width="297" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TB9-GC-Gk0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7JV-UF-q1b" firstAttribute="centerX" secondItem="OYu-Yy-3Av" secondAttribute="centerX" id="3iR-0C-NCy"/>
-                            <constraint firstItem="xKg-qG-pTO" firstAttribute="centerX" secondItem="7JV-UF-q1b" secondAttribute="centerX" id="AtF-3b-E1E"/>
-                            <constraint firstItem="xKg-qG-pTO" firstAttribute="top" secondItem="TB9-GC-Gk0" secondAttribute="top" constant="43" id="B2q-aC-3d7"/>
                             <constraint firstItem="7JV-UF-q1b" firstAttribute="trailing" secondItem="yNc-TJ-WA1" secondAttribute="trailingMargin" id="GdC-4g-LdL"/>
                             <constraint firstItem="VcE-VF-jiq" firstAttribute="top" secondItem="OYu-Yy-3Av" secondAttribute="bottom" constant="95.333333333333144" id="JjN-bw-Rh3"/>
                             <constraint firstItem="OYu-Yy-3Av" firstAttribute="leading" secondItem="TB9-GC-Gk0" secondAttribute="leading" constant="135" id="MzX-p2-pwj"/>
-                            <constraint firstItem="7JV-UF-q1b" firstAttribute="top" secondItem="xKg-qG-pTO" secondAttribute="bottom" constant="7.3333333333333428" id="NAy-dP-8ak"/>
                             <constraint firstItem="7JV-UF-q1b" firstAttribute="leading" secondItem="yNc-TJ-WA1" secondAttribute="leadingMargin" id="OZc-5H-5Bb"/>
                             <constraint firstItem="OYu-Yy-3Av" firstAttribute="centerX" secondItem="VcE-VF-jiq" secondAttribute="centerX" id="P9X-61-3Bl"/>
                             <constraint firstItem="OYu-Yy-3Av" firstAttribute="top" secondItem="7JV-UF-q1b" secondAttribute="bottom" constant="65.000000000000114" id="T4L-Ox-iKa"/>
+                            <constraint firstItem="xKg-qG-pTO" firstAttribute="top" secondItem="TB9-GC-Gk0" secondAttribute="top" constant="37" id="bH5-SO-5P8"/>
                             <constraint firstItem="7JV-UF-q1b" firstAttribute="centerY" secondItem="yNc-TJ-WA1" secondAttribute="centerY" constant="-87.5" id="iA4-8b-nF7"/>
+                            <constraint firstItem="7JV-UF-q1b" firstAttribute="top" secondItem="xKg-qG-pTO" secondAttribute="bottom" constant="8" id="lhu-lM-ZdI"/>
                             <constraint firstItem="VcE-VF-jiq" firstAttribute="bottom" secondItem="TB9-GC-Gk0" secondAttribute="bottom" constant="-16" id="o5G-u2-g6y"/>
                             <constraint firstItem="VcE-VF-jiq" firstAttribute="leading" secondItem="TB9-GC-Gk0" secondAttribute="leading" constant="97" id="rqO-jA-u2U"/>
+                            <constraint firstItem="xKg-qG-pTO" firstAttribute="centerX" secondItem="7JV-UF-q1b" secondAttribute="centerX" id="tVE-VP-LyY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="About " id="aDq-or-qMc"/>
@@ -850,19 +874,19 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemFillColor">
-            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

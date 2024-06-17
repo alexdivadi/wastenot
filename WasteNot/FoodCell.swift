@@ -33,7 +33,7 @@ class FoodCell: UITableViewCell {
 
     
     private func update(with food: Food) {
-        foodLabel.text = food.foodType.name
+        foodLabel.text = food.name
         foodEmojiLabel.text = food.foodType.emoji
         categoryLabel.text = food.foodType.category
         

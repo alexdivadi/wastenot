@@ -21,6 +21,8 @@ class FoodComposeTableViewController: UITableViewController, getFoodTypeDelegate
     @IBOutlet weak var openedSwitch: UISwitch!
     @IBOutlet weak var storageButton: UIButton!
     
+
+    @IBOutlet weak var foodNameTextField: UITextField!
     @IBOutlet weak var openSwitchTableCell: UITableViewCell!
     @IBOutlet weak var tipsView: UITextView!
     
@@ -66,6 +68,7 @@ class FoodComposeTableViewController: UITableViewController, getFoodTypeDelegate
     func getFood(food: Food) {
         self.id = food.id
         self.updateFood(foodType: food.foodType)
+        self.foodNameTextField.text = food.name
         self.fromDateType = food.expirationData?.fromDate ?? "purchase"
         
         self.datePicker.setDate(food.startDate ?? Date(), animated: true)
@@ -78,6 +81,7 @@ class FoodComposeTableViewController: UITableViewController, getFoodTypeDelegate
     
     func getFoodType(foodType: FoodType) {
         self.updateFood(foodType: foodType)
+        self.foodNameTextField.text = foodType.name
         self.updateStorage(storage: self.storage)
         self.storageButton.menu = storageButtonMenu()
         self.toggleOpenedSwitchVisible()
@@ -88,6 +92,7 @@ class FoodComposeTableViewController: UITableViewController, getFoodTypeDelegate
         self.foodType = foodType
         self.foodLabel.text = foodType.name
         self.foodEmojiLabel.text = foodType.emoji
+        
         if let tips = foodType.tips {
             self.tipsView.isHidden = false
             var text: String = ""
@@ -145,11 +150,21 @@ class FoodComposeTableViewController: UITableViewController, getFoodTypeDelegate
         
         var composedFood: Food
         
+        let foodName: String = (foodNameTextField.text == nil || foodNameTextField.text!.isEmpty) 
+        ? foodType.name
+        : foodNameTextField.text!
+        
         if let id = self.id {
-            composedFood = Food(foodType: foodType, id: id)
+            composedFood = Food(
+                foodType: foodType,
+                name: foodName,
+                id: id)
         }
         else {
-            composedFood = Food(foodType: foodType, id: UUID().uuidString)
+            composedFood = Food(
+                foodType: foodType,
+                name: foodName,
+                id: UUID().uuidString)
         }
         
         

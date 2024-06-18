@@ -19,8 +19,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="AppIcon" translatesAutoresizingMaskIntoConstraints="NO" id="gnK-ae-7WW">
                                 <rect key="frame" x="133" y="324" width="126" height="137"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WasteNot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vs3-VM-677">
-                                <rect key="frame" x="95" y="469" width="202" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Food Supply Tracker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vs3-VM-677">
+                                <rect key="frame" x="55" y="469" width="282" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -29,13 +29,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vs3-VM-677" firstAttribute="top" secondItem="gnK-ae-7WW" secondAttribute="bottom" constant="8" id="5Ug-1q-VTE"/>
-                            <constraint firstItem="vs3-VM-677" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="8MW-0v-bYy"/>
-                            <constraint firstItem="gnK-ae-7WW" firstAttribute="leading" secondItem="vs3-VM-677" secondAttribute="leading" constant="38" id="Cs1-rd-b58"/>
+                            <constraint firstItem="vs3-VM-677" firstAttribute="top" secondItem="gnK-ae-7WW" secondAttribute="bottom" constant="8" id="2SN-YK-hFn"/>
                             <constraint firstItem="gnK-ae-7WW" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="KZZ-Iw-pPW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vs3-VM-677" secondAttribute="bottom" constant="313" id="MQI-t6-a1n"/>
                             <constraint firstItem="gnK-ae-7WW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="265" id="PIE-0d-RDs"/>
+                            <constraint firstItem="vs3-VM-677" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="R6N-U5-MvQ"/>
                             <constraint firstItem="gnK-ae-7WW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="133" id="Za3-Hh-hIX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vs3-VM-677" secondAttribute="bottom" constant="313" id="kdb-du-kfc"/>
+                            <constraint firstItem="vs3-VM-677" firstAttribute="centerX" secondItem="gnK-ae-7WW" secondAttribute="centerX" id="bfJ-5v-bWu"/>
                         </constraints>
                     </view>
                 </viewController>

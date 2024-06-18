@@ -42,8 +42,14 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         print(error)
     }
     
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+         completionHandler([.sound])
+    }
+    
+    
     private func registerForPushNotifications() {
-        UNUserNotificationCenter.current().delegate = self
         UNUserNotificationCenter.current().delegate = self
 
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {

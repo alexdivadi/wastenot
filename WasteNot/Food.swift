@@ -181,58 +181,7 @@ extension Food {
         } else {
             foods.append(self)
         }
-        // Schedules a local notification
-        self.checkAndAddNotification()
         
         Food.save(foods)
-    }
-}
-
-extension Food {
-    private func checkAndAddNotification() {
-        let notificationCenter = UNUserNotificationCenter.current()
-        notificationCenter.getNotificationSettings { settings in
-            switch settings.authorizationStatus {
-            case .notDetermined:
-                notificationCenter.requestAuthorization(options: [.alert, .sound]) {
-                    didAllow, error in
-                    if didAllow {
-                        self.scheduleNotification()
-                    }
-                }
-            case .denied:
-                return
-            case .authorized:
-                self.scheduleNotification()
-            default:
-                return
-            }
-        }
-    }
-    
-    private func scheduleNotification() {
-        guard let expirationDate = self.expirationDate else { return }
-        guard expirationDate > Date() else { return }
-        
-        let identifier = "\(self.id)-expiration-notification"
-        let title = "Your food is about to expire!"
-        let body = "Check to see which food has reached its expiration date."
-        
-        let notificationCenter = UNUserNotificationCenter.current()
-        let content = UNMutableNotificationContent()
-        content.title = title
-        content.body = body
-        content.sound = .default
-        
-        let calendar = Calendar.current
-        var components = calendar.dateComponents([.year, .month, .day], from: expirationDate)
-        components.hour = 8
-        components.minute = 0
-        
-        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
-        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-        
-        notificationCenter.removePendingNotificationRequests(withIdentifiers: [identifier])
-        notificationCenter.add(request)
     }
 }
